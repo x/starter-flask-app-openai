@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config.title }}</title>
-
-    <!-- Meta Properties for social preview -->
-    <meta property="og:title" content="{{ config.site_title }}" />
-    <meta property="og:site_name" content="{{ config.site_name }}" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="{{ config.site_description }}" />
+    <title>Feedback Bot - Summary</title>
 
     <!-- Import font from fonts.google.com -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +17,7 @@
 
     <!-- Import our static/css/app.css stylesheet -->
     <link rel="stylesheet" href={{ url_for('static', filename='css/app.css') }} />
-    
+
     <!-- Import our static/js/app.js JavaScript -->
     <script defer src={{ url_for('static', filename='js/app.js' ) }}></script>
   </head>
