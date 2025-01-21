@@ -1,4 +1,4 @@
-# Starter Flask App
+# Starter Flask App - OpenAI Example
 
 This repo is a starter flask app for teaching purposes.
 
