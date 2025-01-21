@@ -53,7 +53,7 @@ def summarize_feedback():
         messages=[
             {
                 "role": "system",
-                "content": "Summarize the submitted feedbacks (new-line separated). Identify key topics about the assignment for the class to discuss. Format as a bullet list in html without code fences.",
+                "content": "Summarize the submitted feedbacks (new-line separated). Identify key topics about the assignment for the class to discuss. Format as an unordered list (ul) in html without code fences. Include the opening and closeing <ul> tags at the start and end of the response, and wrap each bullet point in an li, but don't render any other html.",
             },
             {
                 "role": "user",
