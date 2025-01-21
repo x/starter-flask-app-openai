@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Feedback Bot</title>
+
+    <!-- Import font from fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+    <!-- Import Pico.CSS Micro Framework -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.amber.min.css" />
+
+    <!-- Import our static/css/app.css stylesheet -->
+    <link rel="stylesheet" href={{ url_for('static', filename='css/app.css') }} />
+    
+    <!-- Import our static/js/app.js JavaScript -->
+    <script defer src={{ url_for('static', filename='js/app.js' ) }}></script>
+  </head>
+
+  <body>
+    <main class="container">
+        <div class="vertical-center">
+            <article id="content">
+                Last week's homework was to build your own text adventure game.
+                <br><br>
+                My goals with this assignment were:
+                <ul>
+                    <li>Stick you with an unfamilier codebase and library.</li>
+                    <li>Get you to be a little creative.</li>
+                    <li>Demonstrate how easy it is to build a functional application.</li>
+                </ul>
+                How did you find the assignment?
+                <hr>
+                <form action="/feedback" method="post">
+                    <textarea name="feedback" id="feedback" placeholder="Enter your feedback here" required style="height: 200px;"></textarea>
+                    <input type="submit"></input>
+                </form>
+            </article>
+        </div>
+    </main>
+  </body>
+</html>

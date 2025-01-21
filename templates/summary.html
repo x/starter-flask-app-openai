@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ config.title }}</title>
+
+    <!-- Meta Properties for social preview -->
+    <meta property="og:title" content="{{ config.site_title }}" />
+    <meta property="og:site_name" content="{{ config.site_name }}" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="{{ config.site_description }}" />
+
+    <!-- Import font from fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+    <!-- Import Pico.CSS Micro Framework -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.amber.min.css" />
+
+    <!-- Import our static/css/app.css stylesheet -->
+    <link rel="stylesheet" href={{ url_for('static', filename='css/app.css') }} />
+    
+    <!-- Import our static/js/app.js JavaScript -->
+    <script defer src={{ url_for('static', filename='js/app.js' ) }}></script>
+  </head>
+
+  <body>
+    <main class="container">
+        <div class="vertical-center">
+            <article id="content">
+                {{ summary|safe }}
+            </article>
+        </div>
+    </main>
+  </body>
+</html>

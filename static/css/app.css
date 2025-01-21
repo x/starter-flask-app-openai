@@ -1,0 +1,19 @@
+/* Any custom CSS goes here */
+
+body {
+  background-color: #f8f9fa;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.vertical-center {
+  /* Ensure full viewport height */
+  min-height: 100vh;
+
+  /* Use Flexbox to center horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0; /* Remove default margins if needed */
+}
