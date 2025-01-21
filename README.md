@@ -2,6 +2,9 @@
 
 This repo is a starter flask app for teaching purposes.
 
+This particular variant was made to demonstrate how to use flask with the OpenAI.
+
+For a more basic introduction, see (Starter Flask App)[https://github.com/x/starter-flask-app]
 
 ## How to Clone This Repo
 
@@ -27,17 +30,27 @@ This repo is a starter flask app for teaching purposes.
    pip install -r requirements.txt
    ```
 
-4. Run the following command to start the flask app defined in the `app.py` file:
+4. Get an (OpenAI API Key)[https://openai.com/index/openai-api/] and set it to the environment variable `OPENAI_API_KEY`.
+   ```bash
+   OPENAI_API_KEY="sk-..."
+   ```
+
+5. Run the following command to start the flask app defined in the `app.py` file:
    ```bash
    flask run
    ```
    ![](images_for_readme/image-2.png)
 
-5. Open your browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to see the app running locally.
+6. Open your browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000) to see the app running locally.
+
 
 ## How This App Works
 
 This app is a minimal server/client web application that template rendering, form submission, a database, and OpenAI to collect and summarize feedback from students.
+
+It has two entry points:
+- [`/`](http://127.0.0.1:5000/)
+- [`/summarize_feedback`](http://127.0.0.1:5000/summarize_feedback)
 
 Below is a sequence diagram explaining how it works with two students feedback, Alice and Bobs.
 
